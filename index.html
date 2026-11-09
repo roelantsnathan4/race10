@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RACE°10 — Le Coureur Flou</title>
+<meta name="description" content="RACE°10 — a 10 km concept race by Le Coureur Flou. Sunday 22.11.2026, 10AM, Liège.">
+<meta property="og:title" content="RACE°10 — Le Coureur Flou">
+<meta property="og:description" content="10 km. One goal: everyone hits a PB. Sunday 22.11.2026 — 10AM — Liège.">
+<meta property="og:image" content="Capture%20d%E2%80%99%C3%A9cran%202026-11-09%20%C3%A0%2009.10.52.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;800;900&family=Space+Mono:ital@0;1&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0b0d24;--bg2:#12153a;--ink:#c9cbe6;--dim:#7f83b3;--blue:#3d3bff;--glow:#6a6cff;--line:rgba(201,203,230,.16)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:"Space Mono",ui-monospace,monospace;font-size:15px;line-height:1.6;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:50;opacity:.13;mix-blend-mode:overlay;
+background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+a{color:inherit}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+.display{font-family:"Archivo",sans-serif;font-weight:900;letter-spacing:-.04em;line-height:.85;text-transform:uppercase}
+.label{font-style:italic;text-transform:uppercase;font-size:12px;letter-spacing:.08em;color:var(--dim)}
+nav{position:sticky;top:0;z-index:40;background:rgba(11,13,36,.82);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;justify-content:space-between;align-items:center;height:54px}
+nav .brand{font-family:"Archivo";font-weight:800;font-size:15px;text-decoration:none;filter:blur(.4px)}
+nav ul{display:flex;gap:18px;list-style:none;font-size:12px;text-transform:uppercase}
+nav ul a{text-decoration:none;color:var(--dim)} nav ul a:hover{color:var(--ink)}
+header.hero{position:relative;min-height:calc(100svh - 54px);display:flex;flex-direction:column;justify-content:space-between;padding:28px 20px 36px;overflow:hidden}
+.hero::after{content:"";position:absolute;width:70vmin;height:70vmin;left:50%;top:58%;transform:translate(-50%,-50%);
+background:radial-gradient(circle,var(--blue) 0%,rgba(61,59,255,.35) 35%,transparent 68%);filter:blur(30px);z-index:-1;animation:breathe 7s ease-in-out infinite}
+@keyframes breathe{50%{transform:translate(-48%,-52%) scale(1.08);opacity:.8}}
+.meta{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px 24px;font-style:italic;text-transform:uppercase;font-size:13px}
+.hero h1{font-size:clamp(84px,19vw,250px);margin:24px 0}
+.hero h1 span{display:inline-block;animation:blurin 1.4s ease both}
+@keyframes blurin{from{filter:blur(18px);opacity:0}to{filter:blur(0);opacity:1}}
+.countdown{display:flex;gap:28px;flex-wrap:wrap}
+.countdown div{min-width:64px}
+.countdown b{display:block;font-family:"Archivo";font-weight:800;font-size:clamp(34px,6vw,56px);line-height:1}
+section{padding:96px 0;border-top:1px solid var(--line)}
+section h2{font-size:clamp(48px,9vw,104px);margin-bottom:36px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+.concept p{font-size:clamp(17px,2.1vw,21px);margin-bottom:18px;max-width:34ch}
+.poster img{width:100%;display:block;box-shadow:0 30px 80px -20px rgba(61,59,255,.55)}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--line);margin-bottom:28px}
+.stats div{padding:16px;border-right:1px solid var(--line)} .stats div:last-child{border-right:0}
+.stats b{display:block;font-family:"Archivo";font-weight:800;font-size:30px;line-height:1.1}
+.map{background:var(--bg2);border:1px solid var(--line);padding:10px}
+.map svg{width:100%;height:auto;display:block}
+.map .r{fill:none;stroke:var(--glow);stroke-width:5;stroke-linecap:round;stroke-linejoin:round;filter:drop-shadow(0 0 8px var(--blue))}
+.km circle{fill:var(--bg);stroke:var(--ink);stroke-width:1.5}
+.km text{fill:var(--ink);font:700 11px "Space Mono";text-anchor:middle}
+.pin{fill:var(--ink)} .pinlbl{fill:var(--ink);font:italic 13px "Space Mono";text-transform:uppercase}
+.elev{margin-top:14px} .elev svg{width:100%;height:90px;display:block}
+.elev path{fill:rgba(106,108,255,.28);stroke:var(--glow);stroke-width:1.5}
+.note{color:var(--dim);font-size:13px;margin-top:14px}
+ol.day{list-style:none;border-top:1px solid var(--line)}
+ol.day li{display:grid;grid-template-columns:110px 1fr;gap:20px;padding:20px 0;border-bottom:1px solid var(--line);align-items:baseline}
+ol.day time{font-family:"Archivo";font-weight:800;font-size:28px}
+ol.day b{text-transform:uppercase;font-weight:700}
+ol.day p{color:var(--dim);font-size:14px}
+table{width:100%;border-collapse:collapse;font-size:14px}
+th{font-style:italic;text-transform:uppercase;font-weight:400;font-size:12px;color:var(--dim);text-align:left;padding:10px 8px;border-bottom:1px solid var(--ink)}
+td{padding:14px 8px;border-bottom:1px solid var(--line)}
+td.n{font-family:"Archivo";font-weight:800;font-size:20px;width:48px}
+td.pb{color:#fff;font-weight:700} .tag{background:var(--blue);color:#fff;padding:2px 7px;font-size:11px;margin-left:6px}
+.empty{border:1px dashed var(--line);padding:48px 20px;text-align:center;color:var(--dim)}
+.empty b{display:block;font-family:"Archivo";font-size:28px;color:var(--ink);margin-bottom:6px}
+footer{padding:80px 0 40px;border-top:1px solid var(--line)}
+footer .big{font-size:clamp(56px,13vw,170px);filter:blur(1.5px);opacity:.9}
+.links{display:flex;gap:14px;flex-wrap:wrap;margin:32px 0}
+.links a{border:1px solid var(--ink);padding:12px 20px;text-decoration:none;text-transform:uppercase;font-size:13px;transition:.2s}
+.links a:hover{background:var(--ink);color:var(--bg)}
+.small{font-size:12px;color:var(--dim)}
+@media (max-width:760px){.stats b{font-size:20px}.stats div{padding:12px}.grid2{grid-template-columns:1fr}nav ul{display:none}ol.day li{grid-template-columns:80px 1fr}ol.day time{font-size:22px}section{padding:72px 0}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important}}
+</style>
+</head>
+<body>
+<nav><div class="wrap"><a class="brand" href="#top">LE COUREUR FLOU</a>
+<ul><li><a href="#race">Race</a></li><li><a href="#course">Course</a></li><li><a href="#day">Race day</a></li><li><a href="#results">Results</a></li></ul></div></nav>
+<header class="hero wrap" id="top">
+<div class="meta"><span>Sunday 22/11/2026</span><span>Area : Liège</span><span>Starting time : 10AM</span></div>
+<h1 class="display"><span>Race °10</span></h1>
+<div>
+<div class="label" id="cd-label">Start line in</div>
+<div class="countdown" id="cd">
+<div><b id="d">--</b><span class="label">days</span></div>
+<div><b id="h">--</b><span class="label">hours</span></div>
+<div><b id="m">--</b><span class="label">min</span></div>
+<div><b id="s">--</b><span class="label">sec</span></div>
+</div>
+</div>
+</header>
+<section id="race"><div class="wrap grid2">
+<div class="concept">
+<h2 class="display">The race</h2>
+<p>RACE°10 is a concept race of ten kilometers. The goal is simple: push ourselves and cross our limits together.</p>
+<p>Invitational only. Around thirty runners, one shared target — everyone leaves with a new PB.</p>
+<p>It marks the beginning of a new running era: having fun while hitting PBs.</p>
+<p class="label">Powered by Le Coureur Flou collective</p>
+</div>
+<div class="poster"><img src="Capture%20d%E2%80%99%C3%A9cran%202026-11-09%20%C3%A0%2009.10.52.png" alt="RACE°10 poster — Sunday 22/11/2026, Liège, 10AM"></div>
+</div></section>
+<section id="course"><div class="wrap">
+<h2 class="display">The course</h2>
+<div class="stats">
+<div><b>10.0 km</b><span class="label">distance</span></div>
+<div><b>Out &amp; back</b><span class="label">format</span></div>
+<div><b>Flat</b><span class="label">river path</span></div>
+</div>
+<div class="grid2">
+<div class="map"><svg viewBox="0 0 600 640" role="img" aria-label="Course map: out-and-back route, turnaround at 5 km">
+<path class="r" d="M481,52 467,63 453,78 441,94 424,106 406,115 386,119 366,122 345,126 326,134 307,140 288,148 269,154 249,161 231,170 212,179 197,192 183,206 169,222 156,238 145,255 135,273 125,291 118,310 115,330 115,351 120,371 128,389 139,406 153,422 166,438 180,452 197,465 213,476 229,489 243,504 255,521 267,538 279,554 293,567 305,583 306,585 311,574 298,558 286,541 278,523 272,503 262,485 246,473 232,458 218,443 202,431 183,423 165,414 148,403 136,387 128,368 125,348 125,328 130,308 138,289 148,272 160,254 171,237 184,222 199,207 214,194 232,184 250,174 269,170 288,168 308,162 328,161 348,158 369,156 389,152 388,135 391,118 410,114 429,104 444,90 456,74 468,59 485,50 485,50"/>
+<g class="km"><circle cx="338.9" cy="128.5" r="11"/><text x="338.9" y="132.5">1</text></g><g class="km"><circle cx="187.3" cy="201.3" r="11"/><text x="187.3" y="205.3">2</text></g><g class="km"><circle cx="115.4" cy="350.6" r="11"/><text x="115.4" y="354.6">3</text></g><g class="km"><circle cx="213.4" cy="476.2" r="11"/><text x="213.4" y="480.2">4</text></g>
+<circle class="pin" cx="481.4" cy="51.8" r="8"/><text class="pinlbl" x="321.4" y="51.8">Start / Finish</text>
+<circle class="pin" cx="304.2" cy="590.0" r="6"/><text class="pinlbl" x="318.2" y="595.0">Turn · 5 km</text>
+</svg></div>
+<div>
+<p style="font-size:18px;margin-bottom:18px">Out along the river to the 5 km turnaround, then straight back to the line. Fast, flat, and built for one thing: PBs.</p>
+<div class="elev"><span class="label">Elevation profile</span>
+<svg viewBox="0 0 600 120" preserveAspectRatio="none"><path d="M0,120 L2,56 L10,48 L17,32 L24,28 L31,28 L39,28 L46,28 L53,24 L60,20 L68,20 L75,24 L82,28 L89,32 L96,32 L104,32 L111,36 L118,36 L125,28 L132,32 L140,36 L147,28 L154,24 L161,28 L169,44 L176,40 L183,48 L190,60 L198,68 L205,64 L212,48 L219,56 L226,76 L234,64 L241,56 L248,56 L255,56 L263,52 L270,52 L277,48 L284,52 L292,56 L299,48 L306,92 L313,92 L320,80 L328,76 L335,72 L342,72 L349,72 L357,76 L364,72 L371,64 L378,56 L386,60 L393,64 L400,64 L407,68 L414,68 L422,68 L429,64 L436,52 L443,56 L451,52 L458,52 L465,52 L472,52 L480,52 L487,52 L494,52 L501,36 L508,40 L516,48 L523,48 L530,56 L537,60 L545,52 L552,48 L559,40 L566,40 L574,44 L581,44 L588,48 L595,52 L600,52 L600,120 Z"/></svg>
+<div style="display:flex;justify-content:space-between" class="small"><span>0 km</span><span>5</span><span>10 km</span></div>
+</div>
+<p class="note">Exact meeting point is shared with registered runners.</p>
+</div>
+</div>
+</div></section>
+<section id="day"><div class="wrap">
+<h2 class="display">Race day</h2>
+<ol class="day">
+<li><time>09:15</time><div><b>Meet up</b><p>Arrive, grab your RACE°10 tee, drop your bag.</p></div></li>
+<li><time>09:35</time><div><b>Warm-up together</b><p>Easy jog and drills as a group.</p></div></li>
+<li><time>09:55</time><div><b>Briefing</b><p>Pacing groups, course, one last photo.</p></div></li>
+<li><time>10:00</time><div><b>Start</b><p>10 km. Go get it.</p></div></li>
+<li><time>11:15</time><div><b>Finish &amp; celebrate</b><p>PBs, photos, drinks.</p></div></li>
+</ol>
+</div></section>
+<section id="results"><div class="wrap">
+<h2 class="display">Results</h2>
+<div id="results-box"></div>
+</div></section>
+<footer><div class="wrap">
+<div class="display big">Le coureur flou</div>
+<div class="links">
+<a href="https://www.instagram.com/" id="ig" target="_blank" rel="noopener">Instagram ↗</a>
+<a href="https://www.strava.com/clubs/" id="strava" target="_blank" rel="noopener">Strava club ↗</a>
+</div>
+<p class="small">RACE°10 · Invitational · Liège · 2026</p>
+</div></footer>
+<script>
+/* ===== RESULTS: fill after the race =====
+One line per runner: name, finish time "mm:ss" (or "h:mm:ss"), previous PB (or "" if first 10k) */
+const RESULTS = [
+// ["Nathan", "52:10", "55:51"],
+];
+const toSec=t=>t.split(":").reduce((a,v)=>a*60+ +v,0);
+const fmt=s=>{s=Math.round(s);const m=Math.floor(s/60),r=s%60;return m+":"+String(r).padStart(2,"0")};
+const box=document.getElementById("results-box");
+if(!RESULTS.length){
+box.innerHTML='<div class="empty"><b>Coming 22.11</b>Times and PBs land here after the race.</div>';
+}else{
+const rows=RESULTS.map(r=>({n:r[0],t:toSec(r[1]),raw:r[1],pb:r[2]?toSec(r[2]):null})).sort((a,b)=>a.t-b.t);
+const pbs=rows.filter(r=>r.pb===null||r.t<r.pb).length;
+box.innerHTML='<p style="margin-bottom:20px"><b style="font-family:Archivo;font-size:28px">'+pbs+'/'+rows.length+'</b> <span class="label">runners set a PB</span></p>'+
+'<table><thead><tr><th>#</th><th>Runner</th><th>Time</th><th>Pace</th><th>Δ vs PB</th></tr></thead><tbody>'+
+rows.map((r,i)=>{const isPB=r.pb===null||r.t<r.pb;
+const d=r.pb===null?'first 10k':(r.t<r.pb?'−'+fmt(r.pb-r.t):'+'+fmt(r.t-r.pb));
+return '<tr><td class="n">'+(i+1)+'</td><td>'+r.n+(isPB?'<span class="tag">PB</span>':'')+'</td><td class="'+(isPB?'pb':'')+'">'+r.raw+'</td><td>'+fmt(r.t/10)+'/km</td><td>'+d+'</td></tr>'}).join('')+
+'</tbody></table>';
+}
+/* ===== Countdown ===== */
+const start=new Date("2026-11-22T10:00:00+01:00").getTime();
+function tick(){
+const diff=start-Date.now();
+if(diff<=0){document.getElementById("cd").innerHTML='<div><b>'+(diff>-2*3600e3?'Racing now':'Done. See you next era.')+'</b></div>';document.getElementById("cd-label").textContent="";return}
+const s=Math.floor(diff/1000);
+[["d",Math.floor(s/86400)],["h",Math.floor(s/3600)%24],["m",Math.floor(s/60)%60],["s",s%60]].forEach(([id,v])=>document.getElementById(id).textContent=String(v).padStart(2,"0"));
+setTimeout(tick,1000);
+}
+tick();
+</script>
+</body>
+</html>
